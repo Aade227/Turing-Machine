@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Caesar Cipher Turing Machine Simulator
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>
+                Caesar Cipher using Turing Machine
+            </h1>
+
+            <p>
+                Theory of Computation Case Study
+            </p>
+
+        </header>
+
+        <div class="main-grid">
+
+            <!-- LEFT PANEL -->
+
+            <section class="left-panel">
+
+                <div class="card">
+
+                    <h2>
+                        Input
+                    </h2>
+
+                    <label>
+
+                        Plain Text
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="inputText"
+                        placeholder="HELLO">
+
+                    <label>
+
+                        Shift Key
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="shiftKey"
+                        min="1"
+                        max="25"
+                        value="3">
+
+                    <div class="button-group">
+
+                        <button id="startBtn">
+                            Start
+                        </button>
+
+                        <button id="nextBtn">
+                            Next Step
+                        </button>
+
+                        <button id="autoBtn">
+                            Auto Run
+                        </button>
+
+                        <button id="pauseBtn">
+                            Pause
+                        </button>
+
+                        <button id="resetBtn">
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>
+
+                        Machine State
+
+                    </h2>
+
+                    <div class="info">
+
+                        <span>
+
+                            Current State
+
+                        </span>
+
+                        <strong id="currentState">
+
+                            q0
+
+                        </strong>
+
+                    </div>
+
+                    <div class="info">
+
+                        <span>
+
+                            Head Position
+
+                        </span>
+
+                        <strong id="headPosition">
+
+                            0
+
+                        </strong>
+
+                    </div>
+
+                    <div class="info">
+
+                        <span>
+
+                            Current Symbol
+
+                        </span>
+
+                        <strong id="currentSymbol">
+
+                            -
+
+                        </strong>
+
+                    </div>
+
+                    <div class="info">
+
+                        <span>
+
+                            Encrypted Symbol
+
+                        </span>
+
+                        <strong id="encryptedSymbol">
+
+                            -
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>
+
+                        Transition Function
+
+                    </h2>
+
+                    <div id="transitionBox">
+
+                        δ(q0, A) = (q0, D, R)
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- CENTER -->
+
+            <section class="center-panel">
+
+                <div class="card">
+
+                    <h2>
+
+                        Turing Machine Tape
+
+                    </h2>
+
+                    <div id="tape">
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>
+
+                        Encrypted Output
+
+                    </h2>
+
+                    <div id="outputText">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- RIGHT -->
+
+            <section class="right-panel">
+
+                <div class="card">
+
+                    <h2>
+
+                        Execution Log
+
+                    </h2>
+
+                    <div id="logBox">
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>
+
+                        Statistics
+
+                    </h2>
+
+                    <div class="stats">
+
+                        <div>
+
+                            Characters
+
+                            <strong id="charCount">
+
+                                0
+
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            Steps
+
+                            <strong id="stepCount">
+
+                                0
+
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            Moves
+
+                            <strong id="moveCount">
+
+                                0
+
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            Time
+
+                            <strong id="timeTaken">
+
+                                0 sec
+
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <footer>
+
+            <p>
+
+                Caesar Cipher Turing Machine Simulator
+
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
